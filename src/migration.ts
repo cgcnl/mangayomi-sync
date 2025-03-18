@@ -172,6 +172,7 @@ async function processFavourites(
       customCoverFromTracker: null,
       description: "",
       isLocalArchive: false,
+      isNsfw: manga.manga.nsfw ?? false,
       lang: "en",
       imageUrl: "",
       status: 0,
@@ -338,6 +339,7 @@ function processHistories(
       mangaId: mangaIds.get(history.manga_id) ?? history.manga_id,
       chapterId: chapterIds.get(history.chapter_id) ?? history.chapter_id,
       date: String(history.updated_at),
+      isNsfw: history.isNsfw,
     });
     const readChapter = backup.chapters.filter((chapter) => chapter.id === chapterIds.get(history.chapter_id));
     if (readChapter.length > 0) {

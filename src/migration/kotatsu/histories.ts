@@ -10,6 +10,7 @@ export interface History {
   percent: number
   chapters: number
   manga: Manga
+  isNsfw: boolean
 }
 
 export interface Manga {

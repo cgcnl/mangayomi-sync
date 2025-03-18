@@ -28,6 +28,7 @@ export interface Manga {
     id: number
     imageUrl: string
     isLocalArchive: boolean
+    isNsfw: boolean
     itemType: number
     lang: string
     lastRead: number
@@ -98,6 +99,7 @@ export interface History {
     chapterId: number
     date: string
     id: number
+    isNsfw: boolean
     itemType: number
     mangaId: number
 }
@@ -107,6 +109,7 @@ export interface Update {
     mangaId: number
     chapterName: string
     date: string
+    isNsfw: boolean
 }
 
 export interface Setting {
