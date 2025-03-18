@@ -14,7 +14,7 @@ services:
       database:
         condition: service_healthy
     ports:
-      - ${PORT}
+      - ${PORT}:${PORT}
 
   database:
     image: mysql/mysql-server:8.0
